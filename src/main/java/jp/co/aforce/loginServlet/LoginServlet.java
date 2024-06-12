@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
 		try {
 			HttpSession session = request.getSession();
 
-			String username = request.getParameter("username");
+			String username = request.getParameter("mailaddress");
 			String password = request.getParameter("password");
 
 			LoginDAO dao = new LoginDAO();

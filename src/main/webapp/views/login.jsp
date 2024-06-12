@@ -1,16 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
 
-<form action="/Login/loginServlet" method="post">
-	<p>
-		ユーザーID<input type="text" name="username">
-	</p>
-	<p>
-		パスワード<input type="password" name="password">
-	</p>
+<p>ログイン</p>
+
+<form action="/ShoppingSite/loginServlet" method="post">
+	<p>メールアドレス</p>
+	<input type="email" name="mailaddress" required>
+	<p>パスワード</p>
+	<input type="password" name="password" required>
 	<p>
 		<input type="submit" value="ログイン">
 	</p>
 </form>
+
+<p>
+	or<br>
+	<button onclick="location.href='./login-error.jsp'">新規登録</button>
+</p>
 
 <%@include file="../footer.html"%>

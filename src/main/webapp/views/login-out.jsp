@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
 
-こんにちは、${login.username}さん。
+<p>ログインしました</p>
+
+<p>
+	<button onclick="location.href='./login.jsp'">トップページへ</button>
+</p>
 
 <%@include file="../footer.html"%>
