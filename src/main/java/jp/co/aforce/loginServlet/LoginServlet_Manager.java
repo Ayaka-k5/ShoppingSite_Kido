@@ -24,8 +24,8 @@ public class LoginServlet_Manager extends HttpServlet {
 			String manager_mailaddress = request.getParameter("manager_mailaddress");
 			String manager_password = request.getParameter("manager_password");
 
-			LoginDAO_Manager dao_Manager = new LoginDAO_Manager();
-			Login_Manager login_Manager = dao_Manager.search(manager_mailaddress, manager_password);
+			LoginDAO_Manager dao = new LoginDAO_Manager();
+			Login_Manager login_Manager = dao.search(manager_mailaddress, manager_password);
 
 			if (login_Manager != null) {
 				session.setAttribute("login_Manager", login_Manager);

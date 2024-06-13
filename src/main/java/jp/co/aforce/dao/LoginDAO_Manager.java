@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 
 import jp.co.aforce.beans.Login_Manager;
 
-public class LoginDAO_Manager extends DAO_Manager {
+public class LoginDAO_Manager extends DAO {
 	public Login_Manager search(String manager_mailaddress, String manager_password)
 			throws Exception {
 		Login_Manager login_Manager = null;
