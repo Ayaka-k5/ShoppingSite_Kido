@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
 
-<p>ログイン(管理者)</p>
+<h1>ログイン(管理者)</h1>
 
 <form action="/ShoppingSite/loginServlet_Manager" method="post">
 	<p>メールアドレス</p>
