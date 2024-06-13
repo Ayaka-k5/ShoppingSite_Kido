@@ -15,7 +15,7 @@
 
 <p>
 	or<br>
-	<button onclick="location.href='./login-error.jsp'">新規登録</button>
+	<button type=button onclick="location.href='./login-error.jsp'">新規登録</button>
 </p>
 
 <%@include file="../footer.html"%>
