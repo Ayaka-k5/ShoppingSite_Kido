@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Login implements Serializable {
 	private int customer_id;
 	private String customer_mailaddress;
-	//private String password;
+	private String customer_password;
 
 	public int getCustomer_id() {
 		return customer_id;
@@ -15,9 +15,9 @@ public class Login implements Serializable {
 		return customer_mailaddress;
 	}
 
-	/*public String getPassword() {
-		return password;
-	}*/
+	public String getCustomer_password() {
+		return customer_password;
+	}
 
 	public void setCustomer_id(int customer_id) {
 		this.customer_id = customer_id;
@@ -27,8 +27,8 @@ public class Login implements Serializable {
 		this.customer_mailaddress = customer_mailaddress;
 	}
 
-	/*public void setPassword(String password) {
-		this.password = password;
-	}*/
+	public void setCustomer_password(String customer_password) {
+		this.customer_password = customer_password;
+	}
 
 }

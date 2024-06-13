@@ -22,10 +22,10 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 
 			String customer_mailaddress = request.getParameter("customer_mailaddress");
-			//String password = request.getParameter("password");
+			String customer_password = request.getParameter("customer_password");
 
 			LoginDAO dao = new LoginDAO();
-			Login login = dao.search(customer_mailaddress/*, password*/);
+			Login login = dao.search(customer_mailaddress, customer_password);
 
 			if (login != null) {
 				session.setAttribute("login", login);
