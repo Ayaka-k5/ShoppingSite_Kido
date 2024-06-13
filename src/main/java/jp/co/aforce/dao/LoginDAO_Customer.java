@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 
 import jp.co.aforce.beans.Login_Customer;
 
-public class LoginDAO_Customer extends DAO_Customer {
+public class LoginDAO_Customer extends DAO {
 	public Login_Customer search(String customer_mailaddress, String customer_password)
 			throws Exception {
 		Login_Customer login_customer = null;

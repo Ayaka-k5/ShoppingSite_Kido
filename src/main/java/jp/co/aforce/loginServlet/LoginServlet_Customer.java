@@ -24,8 +24,8 @@ public class LoginServlet_Customer extends HttpServlet {
 			String customer_mailaddress = request.getParameter("customer_mailaddress");
 			String customer_password = request.getParameter("customer_password");
 
-			LoginDAO_Customer dao_Customer = new LoginDAO_Customer();
-			Login_Customer login_Customer = dao_Customer.search(customer_mailaddress, customer_password);
+			LoginDAO_Customer dao = new LoginDAO_Customer();
+			Login_Customer login_Customer = dao.search(customer_mailaddress, customer_password);
 
 			if (login_Customer != null) {
 				session.setAttribute("login_Customer", login_Customer);
