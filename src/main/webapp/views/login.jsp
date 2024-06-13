@@ -13,12 +13,12 @@
 	</p>
 </form>
 
+<p>or</p>
 <p>
-	or<br>
 	<button type=button onclick="location.href='./login-error.jsp'">新規登録</button>
 </p>
 <p>
-<button type="button" onclick="history.back()">戻る</button>
+	<button type="button" onclick="history.back()">戻る</button>
 </p>
 
 <%@include file="../footer.html"%>
