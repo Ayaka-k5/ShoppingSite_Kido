@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
 
-<p>ログイン(お客様)</p>
+<p>ログイン(管理者)</p>
 
-<form action="/ShoppingSite/loginServlet" method="post">
+<form action="/ShoppingSite/loginServlet2" method="post">
 	<p>メールアドレス</p>
-	<input type="email" name="customer_mailaddress" required>
+	<input type="email" name="manager_mailaddress" required>
 	<p>パスワード</p>
-	<input type="password" name="customer_password" required>
+	<input type="password" name="manager_password" required>
 	<p>
 		<input type="submit" value="ログイン">
 	</p>
