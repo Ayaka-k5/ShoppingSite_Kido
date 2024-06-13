@@ -9,11 +9,11 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import jp.co.aforce.beans.Login;
-import jp.co.aforce.dao.LoginDAO;
+import jp.co.aforce.beans.Login_Manager;
+import jp.co.aforce.dao.LoginDAO_Manager;
 
-@WebServlet("/loginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/loginServlet_Manager")
+public class LoginServlet_Manager extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -21,15 +21,15 @@ public class LoginServlet extends HttpServlet {
 		try {
 			HttpSession session = request.getSession();
 
-			String customer_mailaddress = request.getParameter("customer_mailaddress");
-			String customer_password = request.getParameter("customer_password");
+			String manager_mailaddress = request.getParameter("manager_mailaddress");
+			String manager_password = request.getParameter("manager_password");
 
-			LoginDAO dao = new LoginDAO();
-			Login login = dao.search(customer_mailaddress, customer_password);
+			LoginDAO_Manager dao_Manager = new LoginDAO_Manager();
+			Login_Manager login_Manager = dao_Manager.search(manager_mailaddress, manager_password);
 
-			if (login != null) {
-				session.setAttribute("login", login);
-				request.getRequestDispatcher("/views/login-out.jsp").forward(request, response);
+			if (login_Manager != null) {
+				session.setAttribute("login_Manager", login_Manager);
+				request.getRequestDispatcher("/views/login-out_Manager.jsp").forward(request, response);
 			} else {
 				request.getRequestDispatcher("/views/login-error.jsp").forward(request, response);
 			}

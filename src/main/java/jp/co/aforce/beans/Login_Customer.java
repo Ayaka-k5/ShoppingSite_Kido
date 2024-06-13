@@ -2,7 +2,7 @@ package jp.co.aforce.beans;
 
 import java.io.Serializable;
 
-public class Login implements Serializable {
+public class Login_Customer implements Serializable {
 	private int customer_id;
 	private String customer_mailaddress;
 	private String customer_password;

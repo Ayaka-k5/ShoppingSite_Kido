@@ -3,7 +3,7 @@
 
 <p>ログイン(管理者)</p>
 
-<form action="/ShoppingSite/loginServlet2" method="post">
+<form action="/ShoppingSite/loginServlet_Manager" method="post">
 	<p>メールアドレス</p>
 	<input type="email" name="manager_mailaddress" required>
 	<p>パスワード</p>

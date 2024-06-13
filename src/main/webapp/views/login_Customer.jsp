@@ -3,7 +3,7 @@
 
 <p>ログイン(お客様)</p>
 
-<form action="/ShoppingSite/loginServlet" method="post">
+<form action="/ShoppingSite/loginServlet_Customer" method="post">
 	<p>メールアドレス</p>
 	<input type="email" name="customer_mailaddress" required>
 	<p>パスワード</p>

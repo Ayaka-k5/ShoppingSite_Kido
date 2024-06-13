@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import jp.co.aforce.beans.Login2;
+import jp.co.aforce.beans.Login_Manager;
 
-public class LoginDAO2 extends DAO2 {
-	public Login2 search(String manager_mailaddress, String manager_password)
+public class LoginDAO_Manager extends DAO_Manager {
+	public Login_Manager search(String manager_mailaddress, String manager_password)
 			throws Exception {
-		Login2 login2 = null;
+		Login_Manager login_Manager = null;
 
 		Connection con = getConnection();
 
@@ -21,15 +21,15 @@ public class LoginDAO2 extends DAO2 {
 		ResultSet rs = st.executeQuery();
 
 		while (rs.next()) {
-			login2 = new Login2();
-			login2.setManager_id(rs.getInt("manager_id"));
-			login2.setManager_mailaddress(rs.getString("manager_mailaddress"));
-			login2.setManager_password(rs.getString("manager_password"));
+			login_Manager = new Login_Manager();
+			login_Manager.setManager_id(rs.getInt("manager_id"));
+			login_Manager.setManager_mailaddress(rs.getString("manager_mailaddress"));
+			login_Manager.setManager_password(rs.getString("manager_password"));
 		}
 
 		st.close();
 		con.close();
-		return login2;
+		return login_Manager;
 	}
 
 }

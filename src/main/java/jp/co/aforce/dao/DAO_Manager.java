@@ -5,7 +5,7 @@ import java.sql.Connection;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-public class DAO {
+public class DAO_Manager {
 	static DataSource ds;
 
 	public Connection getConnection() throws Exception {
