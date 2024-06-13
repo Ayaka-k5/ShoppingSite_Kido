@@ -21,17 +21,17 @@ public class LoginServlet extends HttpServlet {
 		try {
 			HttpSession session = request.getSession();
 
-			String username = request.getParameter("mailaddress");
-			String password = request.getParameter("password");
+			String customer_mailaddress = request.getParameter("customer_mailaddress");
+			//String password = request.getParameter("password");
 
 			LoginDAO dao = new LoginDAO();
-			Login login = dao.search(username, password);
+			Login login = dao.search(customer_mailaddress/*, password*/);
 
 			if (login != null) {
 				session.setAttribute("login", login);
-				request.getRequestDispatcher("/jsp/login-out.jsp").forward(request, response);
+				request.getRequestDispatcher("/views/login-out.jsp").forward(request, response);
 			} else {
-				request.getRequestDispatcher("/jsp/login-error.jsp").forward(request, response);
+				request.getRequestDispatcher("/views/login-error.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace(out);

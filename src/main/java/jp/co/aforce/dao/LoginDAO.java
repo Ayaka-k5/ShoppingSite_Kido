@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import jp.co.aforce.beans.Login;
 
 public class LoginDAO extends DAO {
-	public Login search(String username, String password)
+	public Login search(String customer_mailaddress/*, String password*/)
 			throws Exception {
 		Login login = null;
 
@@ -15,16 +15,16 @@ public class LoginDAO extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"SELECT * FROM login WHERE username= ? and password= ?");
-		st.setString(1, username);
-		st.setString(2, password);
+				"SELECT * FROM Customer WHERE Customer_mailaddress= ?");
+		st.setString(1, customer_mailaddress);
+		//st.setString(2, password);
 		ResultSet rs = st.executeQuery();
 
 		while (rs.next()) {
 			login = new Login();
-			login.setId(rs.getInt("id"));
-			login.setUsername(rs.getString("username"));
-			login.setPassword(rs.getString("password"));
+			login.setCustomer_id(rs.getInt("customer_id"));
+			login.setCustomer_mailaddress(rs.getString("customer_mailaddress"));
+			//login.setPassword(rs.getString("password"));
 		}
 
 		st.close();

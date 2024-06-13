@@ -4,7 +4,7 @@
 <p>ログインしました</p>
 
 <p>
-	<button onclick="location.href='./login.jsp'">トップページへ</button>
+	<button onclick="location.href='./login-error.jsp'">トップページへ</button>
 </p>
 
 <%@include file="../footer.html"%>

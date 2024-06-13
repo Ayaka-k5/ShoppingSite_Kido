@@ -5,9 +5,9 @@
 
 <form action="/ShoppingSite/loginServlet" method="post">
 	<p>メールアドレス</p>
-	<input type="email" name="mailaddress" required>
-	<p>パスワード</p>
-	<input type="password" name="password" required>
+	<input type="email" name="customer_mailaddress" required>
+	<%-- <p>パスワード</p>
+	<input type="password" name="password" required> --%>
 	<p>
 		<input type="submit" value="ログイン">
 	</p>

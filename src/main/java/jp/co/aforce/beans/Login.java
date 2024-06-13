@@ -3,32 +3,32 @@ package jp.co.aforce.beans;
 import java.io.Serializable;
 
 public class Login implements Serializable {
-	private int id;
-	private String username;
-	private String password;
+	private int customer_id;
+	private String customer_mailaddress;
+	//private String password;
 
-	public int getId() {
-		return id;
+	public int getCustomer_id() {
+		return customer_id;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getCustomer_mailaddress() {
+		return customer_mailaddress;
 	}
 
-	public String getPassword() {
+	/*public String getPassword() {
 		return password;
+	}*/
+
+	public void setCustomer_id(int customer_id) {
+		this.customer_id = customer_id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCustomer_mailaddress(String customer_mailaddress) {
+		this.customer_mailaddress = customer_mailaddress;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public void setPassword(String password) {
+	/*public void setPassword(String password) {
 		this.password = password;
-	}
+	}*/
 
 }
