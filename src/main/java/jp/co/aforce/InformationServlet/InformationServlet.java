@@ -36,7 +36,7 @@ public class InformationServlet extends HttpServlet {
             if (result > 0) {
                 // 登録に成功した場合、成功ページに遷移
                 session.setAttribute("information", new Information());
-                request.getRequestDispatcher("/views/information_success.jsp").forward(request, response);
+                request.getRequestDispatcher("/views/information_out.jsp").forward(request, response);
             } else {
                 // 登録に失敗した場合、エラーページに遷移
                 request.getRequestDispatcher("/views/information_error.jsp").forward(request, response);
