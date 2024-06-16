@@ -1,16 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
 
-<h1>会員情報登録</h1>
+<h1>会員情報登録(お客様)</h1>
+
 <form action="/ShoppingSite/informationServlet" method="post">
 	<p>メールアドレス</p>
 	<input type="email" name="customer_mailaddress" required>
 
 	<p>パスワード</p>
 	<input type="password" name="customer_password" required>
-	<%-- 
+	 
 	<p>姓</p>
-		<input type="text" name="customer_lastname" required>
+	<input type="text" name="customer_lastname" required>
+
 	<p>名</p>
 	<input type="text" name="customer_firstname" required>
 
@@ -19,7 +21,7 @@
 
 	<p>住所</p>
 	<input type="text" name="customer_address" required>
---%>
+
 	<p>
 		<input type="submit" value="登録">
 	</p>

@@ -5,7 +5,7 @@
 
 <p>
 	<button type=button
-		onclick="location.href='/ShoppingSite/views/login-out.jsp'">ログインページへ</button>
+		onclick="location.href='/ShoppingSite/views/login_Customer.jsp'">ログインページへ</button>
 </p>
 
 <%@include file="../footer.html"%>
