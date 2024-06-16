@@ -29,24 +29,24 @@ public class InformationServlet extends HttpServlet {
 			String customer_address = request.getParameter("customer_address");
 
 			InformationDAO dao = new InformationDAO();
-			
-			// 新規登録を行う
-            int result = dao.insert(customer_mailaddress, customer_password,
-            	customer_lastname, customer_firstname, customer_telephone, 
-            	customer_address);
 
-            if (result > 0) {
-                // 登録に成功した場合、成功ページに遷移
-                session.setAttribute("information", new Information());
-                request.getRequestDispatcher("/views/information-out.jsp").forward(request, response);
-            } else {
-                // 登録に失敗した場合、エラーページに遷移
-                request.getRequestDispatcher("/views/information-error.jsp").forward(request, response);
-            }
-        } catch (Exception e) {
-            e.printStackTrace(out);
-            // 例外が発生した場合もエラーページに遷移
-            request.getRequestDispatcher("/views/information-error.jsp").forward(request, response);
-        }
-    }
+			// 新規登録を行う
+			int result = dao.insert(customer_mailaddress, customer_password,
+					customer_lastname, customer_firstname, customer_telephone,
+					customer_address);
+
+			if (result > 0) {
+				// 登録に成功した場合、成功ページに遷移
+				session.setAttribute("information", new Information());
+				request.getRequestDispatcher("/views/information-out.jsp").forward(request, response);
+			} else {
+				// 登録に失敗した場合、エラーページに遷移
+				request.getRequestDispatcher("/views/information-error.jsp").forward(request, response);
+			}
+		} catch (Exception e) {
+			e.printStackTrace(out);
+			// 例外が発生した場合もエラーページに遷移
+			request.getRequestDispatcher("/views/information-error.jsp").forward(request, response);
+		}
+	}
 }

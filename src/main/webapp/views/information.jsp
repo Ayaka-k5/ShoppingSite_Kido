@@ -3,13 +3,13 @@
 
 <h1>会員情報登録(お客様)</h1>
 
-<form action="/ShoppingSite/informationServlet" method="post">
+<form action="/ShoppingSite/confirmServlet" method="post">
 	<p>メールアドレス</p>
 	<input type="email" name="customer_mailaddress" required>
 
 	<p>パスワード</p>
 	<input type="password" name="customer_password" required>
-	 
+
 	<p>姓</p>
 	<input type="text" name="customer_lastname" required>
 
