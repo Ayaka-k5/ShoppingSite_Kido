@@ -9,12 +9,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/confirmServlet")
-public class ConfirmServlet extends HttpServlet {
+@WebServlet("/confirmServlet_Manager")
+public class ConfirmServlet_Manager extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/confirm.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/views/confirm_Manager.jsp");
 		dispatcher.forward(request, response);
 	}
 }

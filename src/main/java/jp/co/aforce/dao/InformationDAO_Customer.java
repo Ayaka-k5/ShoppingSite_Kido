@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import jp.co.aforce.beans.Information;
+import jp.co.aforce.beans.Information_Customer;
 
-public class InformationDAO extends DAO {
+public class InformationDAO_Customer extends DAO {
 	public int insert(String customer_mailaddress, String customer_password, String customer_lastname,
 			String customer_firstname, String customer_telephone, String customer_address)
 			throws Exception {
@@ -31,7 +31,7 @@ public class InformationDAO extends DAO {
 
 	}
 
-	public Information search(String customer_mailaddress, String customer_password, String customer_lastname,
+	public Information_Customer search(String customer_mailaddress, String customer_password, String customer_lastname,
 			String customer_firstname, String customer_telephone, String customer_address)
 			throws Exception {
 		Connection con = getConnection();
@@ -47,30 +47,30 @@ public class InformationDAO extends DAO {
 
 		ResultSet rs = st.executeQuery();
 
-		Information information = null;
+		Information_Customer information_customer = null;
 
 		if (rs.next()) {
-			information = new Information();
-			information.setCustomer_id(rs.getInt("customer_id"));
+			information_customer = new Information_Customer();
+			information_customer.setCustomer_id(rs.getInt("customer_id"));
 
-			information.setCustomer_mailaddress(rs.getString("customer_mailaddress"));
+			information_customer.setCustomer_mailaddress(rs.getString("customer_mailaddress"));
 
-			information.setCustomer_password(rs.getString("customer_password"));
+			information_customer.setCustomer_password(rs.getString("customer_password"));
 
-			information.setCustomer_lastname(rs.getString("customer_lastname"));
+			information_customer.setCustomer_lastname(rs.getString("customer_lastname"));
 
-			information.setCustomer_firstname(rs.getString("customer_firstname"));
+			information_customer.setCustomer_firstname(rs.getString("customer_firstname"));
 
-			information.setCustomer_telephone(rs.getString("customer_telephone"));
+			information_customer.setCustomer_telephone(rs.getString("customer_telephone"));
 
-			information.setCustomer_address(rs.getString("customer_address"));
+			information_customer.setCustomer_address(rs.getString("customer_address"));
 		}
 
 		rs.close();
 		st.close();
 		con.close();
 
-		return information;
+		return information_customer;
 	}
 
 }

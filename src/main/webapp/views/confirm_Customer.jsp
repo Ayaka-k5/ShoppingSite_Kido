@@ -3,7 +3,7 @@
 
 <h1>以下の情報でよろしいですか？</h1>
 
-<form action="/ShoppingSite/informationServlet" method="post">
+<form action="/ShoppingSite/informationServlet_Customer" method="post">
 	<p>
 		メールアドレス:
 		<%=request.getParameter("customer_mailaddress")%></p>

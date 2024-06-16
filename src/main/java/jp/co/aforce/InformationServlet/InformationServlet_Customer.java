@@ -9,11 +9,11 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import jp.co.aforce.beans.Information;
-import jp.co.aforce.dao.InformationDAO;
+import jp.co.aforce.beans.Information_Customer;
+import jp.co.aforce.dao.InformationDAO_Customer;
 
-@WebServlet("/informationServlet")
-public class InformationServlet extends HttpServlet {
+@WebServlet("/informationServlet_Customer")
+public class InformationServlet_Customer extends HttpServlet {
 	@Override
 	protected void doPost(
 			HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,7 +28,7 @@ public class InformationServlet extends HttpServlet {
 			String customer_telephone = request.getParameter("customer_telephone");
 			String customer_address = request.getParameter("customer_address");
 
-			InformationDAO dao = new InformationDAO();
+			InformationDAO_Customer dao = new InformationDAO_Customer();
 
 			// 新規登録を行う
 			int result = dao.insert(customer_mailaddress, customer_password,
@@ -37,8 +37,8 @@ public class InformationServlet extends HttpServlet {
 
 			if (result > 0) {
 				// 登録に成功した場合、成功ページに遷移
-				session.setAttribute("information", new Information());
-				request.getRequestDispatcher("/views/information-out.jsp").forward(request, response);
+				session.setAttribute("information_customer", new Information_Customer());
+				request.getRequestDispatcher("/views/information-out_Customer.jsp").forward(request, response);
 			} else {
 				// 登録に失敗した場合、エラーページに遷移
 				request.getRequestDispatcher("/views/information-error.jsp").forward(request, response);
