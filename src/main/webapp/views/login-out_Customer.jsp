@@ -5,7 +5,7 @@
 
 <p>
 	<button type=button
-		onclick="location.href='/ShoppingSite/index_Customer.html'">トップページへ</button>
+		onclick="location.href='/ShoppingSite/index_Customer.jsp'">トップページへ</button>
 </p>
 
 <%@include file="../footer.html"%>
