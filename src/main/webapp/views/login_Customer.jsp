@@ -15,7 +15,11 @@
 
 <p>or</p>
 <p>
+<<<<<<< HEAD
 	<button type=button onclick="location.href='./information.jsp'">新規登録</button>
+=======
+	<button type=button onclick="location.href='/views/information_Customer.jsp'">新規登録</button>
+>>>>>>> branch 'master' of https://github.com/Ayaka-k5/ShoppingSite_Kido.git
 </p>
 <p>
 	<button type="button" onclick="history.back()">戻る</button>
