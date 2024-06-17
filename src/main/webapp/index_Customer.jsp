@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@include file="../css/style.css"%>
 <%@include file="../header.html"%>
 
 <header>
@@ -13,7 +14,12 @@
 		</ul>
 	</nav>
 </header>
+<h1>Hug Me</h1>
 
-あ
+<img src="img/duffy_friends3.png">
+
+<p>
+	ダッフィーフレンズのぬいぐるみを販売しているサイトです。
+</p>
 
 <%@include file="../footer.html"%>
