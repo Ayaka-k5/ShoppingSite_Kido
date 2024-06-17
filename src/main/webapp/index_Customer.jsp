@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@include file="../header.html"%>
 
-<head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
-</head>
+あ
 
-<body>
-	あ
-</body>
-
-</html>
+<%@include file="../footer.html"%>
