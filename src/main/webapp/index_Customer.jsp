@@ -16,7 +16,7 @@
 </header>
 <h1>Hug Me</h1>
 
-<img src="img/duffy_friends3.png">
+<img src="img/duffy_friends1.png">
 
 <p>
 	ダッフィーフレンズのぬいぐるみを販売しているサイトです。
