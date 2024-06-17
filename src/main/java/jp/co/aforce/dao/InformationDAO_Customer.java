@@ -2,9 +2,6 @@ package jp.co.aforce.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import jp.co.aforce.beans.Information_Customer;
 
 public class InformationDAO_Customer extends DAO {
 	public int insert(String customer_mailaddress, String customer_password, String customer_lastname,
@@ -31,29 +28,29 @@ public class InformationDAO_Customer extends DAO {
 
 	}
 
-	public Information_Customer search(String customer_mailaddress/*, String customer_password, String customer_lastname,
-			String customer_firstname, String customer_telephone, String customer_address*/)
-			throws Exception {
-		Connection con = getConnection();
-
-		PreparedStatement st = con.prepareStatement(
-				"SELECT * FROM Customer WHERE Customer_Mailaddress = ?");
-		st.setString(1, customer_mailaddress);
+//	public Information_Customer search(String customer_mailaddress/*, String customer_password, String customer_lastname,
+//			String customer_firstname, String customer_telephone, String customer_address*/)
+//			throws Exception {
+//		Connection con = getConnection();
+//
+//		PreparedStatement st = con.prepareStatement(
+//				"SELECT * FROM Customer WHERE Customer_Mailaddress = ?");
+//		st.setString(1, customer_mailaddress);
 		/*st.setString(2, customer_password);
 		st.setString(3, customer_lastname);
 		st.setString(4, customer_firstname);
 		st.setString(5, customer_telephone);
 		st.setString(6, customer_address);*/
 
-		ResultSet rs = st.executeQuery();
-
-		Information_Customer information_customer = null;
-
-		if (rs.next()) {
-			information_customer = new Information_Customer();
-			//information_customer.setCustomer_id(rs.getInt("customer_id"));
-
-			information_customer.setCustomer_mailaddress(rs.getString("customer_mailaddress"));
+//		ResultSet rs = st.executeQuery();
+//
+//		Information_Customer information_customer = null;
+//
+//		if (rs.next()) {
+//			information_customer = new Information_Customer();
+//			//information_customer.setCustomer_id(rs.getInt("customer_id"));
+//
+//			information_customer.setCustomer_mailaddress(rs.getString("customer_mailaddress"));
 
 			/*information_customer.setCustomer_password(rs.getString("customer_password"));
 
@@ -64,13 +61,13 @@ public class InformationDAO_Customer extends DAO {
 			information_customer.setCustomer_telephone(rs.getString("customer_telephone"));
 
 			information_customer.setCustomer_address(rs.getString("customer_address"));
-		*/}
+//		}*/
 
-		rs.close();
-		st.close();
-		con.close();
-
-		return information_customer;
-	}
+//		rs.close();
+//		st.close();
+//		con.close();
+//
+//		return information_customer;
+//	}
 
 }
