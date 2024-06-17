@@ -15,7 +15,8 @@
 
 <p>or</p>
 <p>
-	<button type=button onclick="location.href='/ShoppingSite/views/information_Customer.jsp'">新規登録</button>
+	<button type=button
+		onclick="location.href='/ShoppingSite/views/information_Customer.jsp'">新規登録</button>
 </p>
 <p>
 	<button type="button" onclick="history.back()">戻る</button>
