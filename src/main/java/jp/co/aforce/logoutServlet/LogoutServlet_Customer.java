@@ -23,9 +23,9 @@ public class LogoutServlet_Customer extends HttpServlet {
 
 			if (session.getAttribute("login_Customer") != null) {
 				session.removeAttribute("login_Customer");
-				request.getRequestDispatcher("logout-out_Customer.jsp");
+				request.getRequestDispatcher("/views/logout-out_Customer.jsp").forward(request, response);
 			} else {
-				request.getRequestDispatcher("logout-error_Customer.jsp");
+				request.getRequestDispatcher("/views/logout-error_Customer.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			e.printStackTrace(out);
