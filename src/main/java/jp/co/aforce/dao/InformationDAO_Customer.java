@@ -15,7 +15,7 @@ public class InformationDAO_Customer extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"INSERT INTO Customer(Customer_Mailaddress, Customer_Password, Customer_LastName, Customer_FirstName, Customer_Telephone, Customer_Address) values (?, ?, ?, ?, ?, ?)");
+				"INSERT INTO Customer (Customer_Mailaddress, Customer_Password, Customer_LastName, Customer_FirstName, Customer_Telephone, Customer_Address) values (?, ?, ?, ?, ?, ?)");
 		st.setString(1, customer_mailaddress);
 		st.setString(2, customer_password);
 		st.setString(3, customer_lastname);

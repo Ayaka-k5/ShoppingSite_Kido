@@ -6,25 +6,29 @@
 <form action="/ShoppingSite/informationServlet_Manager" method="post">
 	<p>
 		メールアドレス:
-		<%=request.getParameter("manager_mailaddress")%></p>
+		<%=request.getParameter("manager_mailaddress")%>
+	</p>
 	<input type="hidden" name="manager_mailaddress"
 		value="<%=request.getParameter("manager_mailaddress")%>">
 
 	<p>
 		パスワード:
-		<%=request.getParameter("manager_password")%></p>
+		<%=request.getParameter("manager_password")%>
+	</p>
 	<input type="hidden" name="manager_password"
 		value="<%=request.getParameter("manager_password")%>">
 
 	<p>
 		姓:
-		<%=request.getParameter("manager_lastname")%></p>
+		<%=request.getParameter("manager_lastname")%>
+	</p>
 	<input type="hidden" name="manager_lastname"
 		value="<%=request.getParameter("manager_lastname")%>">
 
 	<p>
 		名:
-		<%=request.getParameter("manager_firstname")%></p>
+		<%=request.getParameter("manager_firstname")%>
+	</p>
 	<input type="hidden" name="manager_firstname"
 		value="<%=request.getParameter("manager_firstname")%>">
 

@@ -16,7 +16,7 @@ public class InformationDAO_Manager extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"INSERT INTO Manager(Manager_Mailaddress, Manager_Password, Manager_LastName, Manager_FirstName) values (?, ?, ?, ?)");
+				"INSERT INTO Manager (Manager_Mailaddress, Manager_Password, Manager_LastName, Manager_FirstName) values (?, ?, ?, ?)");
 		st.setString(1, manager_mailaddress);
 		st.setString(2, manager_password);
 		st.setString(3, manager_lastname);
