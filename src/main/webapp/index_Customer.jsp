@@ -8,7 +8,7 @@
 			<li><a href="index_Customer.jsp">トップページ</a></li>
 			<li><a href="#">商品一覧</a></li>
 			<li><a href="/ShoppingSite/views/login_Customer.jsp">ログイン/新規登録</a></li>
-			<li><a href="#">ログアウト</a></li>
+			<li><a href="/ShoppingSite/views/logout_Customer.jsp"">ログアウト</a></li>
 			<li><a href="#">購入履歴</a></li>
 			<li><a href="#">カート</a></li>
 		</ul>
