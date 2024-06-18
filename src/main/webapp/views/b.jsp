@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page import="jakarta.servlet.http.HttpSession;"%>
 <%@include file="../css/style.css"%>
 <%@include file="../header.html"%>
 
@@ -16,10 +17,22 @@
 <h1>Hug Me</h1>
 
 <p>
-	商品一覧
-	<br>全2種類です
+	商品一覧 <br>全2種類です
 </p>
-<img src="../img/1.Duffy.jpg">
+<%
+HttpSession session = request.getSession();
+String productImage = (String) session.getAttribute("product_image");
+
+if (product_image != null) {
+%>
+<img src="<%=product_image%>" alt="product_image" />
+<%
+} else {
+%>
+<p>Error: Product image not found.</p>
+<%
+}
+%>
 
 <img src="../img/duffy_friends2.png">
 
