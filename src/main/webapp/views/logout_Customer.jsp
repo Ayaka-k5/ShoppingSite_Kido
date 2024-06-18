@@ -6,7 +6,6 @@
 <p>ログアウトしますか？</p>
 
 <form action="/ShoppingSite/logoutServlet_Customer" method="post">
-<p>
 	<p>
 		<input type="submit" value="ログアウト">
 	</p>
