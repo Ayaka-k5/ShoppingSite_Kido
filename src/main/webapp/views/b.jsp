@@ -21,7 +21,7 @@
 </p>
 <%
 HttpSession session = request.getSession();
-String productImage = (String) session.getAttribute("product_image");
+String product_image = (String) session.getAttribute("product_image");
 
 if (product_image != null) {
 %>
