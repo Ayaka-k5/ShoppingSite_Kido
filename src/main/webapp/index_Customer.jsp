@@ -5,7 +5,7 @@
 <header>
 	<nav>
 		<ul>
-			<li><a href="index_Customer.jsp">トップページ</a></li>
+			<li><a href="index_Customer.jsp">Hug Me</a></li>
 			<li><a href="#">商品一覧</a></li>
 			<li><a href="/ShoppingSite/views/login_Customer.jsp">ログイン/新規登録</a></li>
 			<li><a href="/ShoppingSite/views/logout_Customer.jsp"">ログアウト</a></li>

@@ -4,7 +4,7 @@
 <header>
 	<nav>
 		<ul>
-			<li><a href="index_Manager.jsp">トップページ</a></li>
+			<li><a href="index_Manager.jsp">Hug Me</a></li>
 			<li><a href="#">商品管理</a></li>
 			<li><a href="/ShoppingSite/views/login_Manager.jsp">ログイン/新規登録</a></li>
 			<li><a href="/ShoppingSite/views/logout_Manager.jsp">ログアウト</a></li>
