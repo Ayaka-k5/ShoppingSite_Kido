@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ page import="jakarta.servlet.http.HttpSession;"%>
-<%@include file="../css/style.css"%>
+<%--<%@include file="../css/style.css"--%>
 <%@include file="../header.html"%>
 
 <header>
@@ -19,6 +19,7 @@
 <p>
 	商品一覧 <br>全2種類です
 </p>
+
 <%
 HttpSession session = request.getSession();
 String product_image = (String) session.getAttribute("product_image");

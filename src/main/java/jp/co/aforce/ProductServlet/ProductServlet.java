@@ -30,8 +30,7 @@ public class ProductServlet extends HttpServlet {
 				session.setAttribute("product_image", product.getProduct_image());
 				request.getRequestDispatcher("/views/b.jsp").forward(request, response);
 			} else {
-				request.setAttribute("errorMessage", "Product not found");
-				request.getRequestDispatcher("/views/error.jsp").forward(request, response);
+				request.getRequestDispatcher("/views/b.jsp").forward(request, response);
 			}
 
 		} catch (Exception e) {
