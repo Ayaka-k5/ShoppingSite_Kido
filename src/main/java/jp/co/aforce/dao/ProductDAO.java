@@ -3,30 +3,62 @@ package jp.co.aforce.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import jp.co.aforce.beans.Product;
 
 public class ProductDAO extends DAO {
-	public Product search(String product_image)
+	public List<Product> search()
 			throws Exception {
-		Product product = null;
+		List<Product> list = new ArrayList<>();
 
 		Connection con = getConnection();
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"SELECT * FROM Product WHERE Product_Image= ?");
-		st.setString(1, product_image);
+				"SELECT * FROM Product");
 		ResultSet rs = st.executeQuery();
 
 		while (rs.next()) {
-			product = new Product();
+			Product product = new Product();
 			product.setProduct_id(rs.getInt("product_id"));
 			product.setProduct_image(rs.getString("product_image"));
-
-			st.close();
-			con.close();
+			product.setProduct_name(rs.getString("product_name"));
+			product.setProduct_price(rs.getInt("product_price"));
+			product.setProduct_description(rs.getString("product_description"));
+			list.add(product);
 		}
-		return product;
+		st.close();
+		con.close();
+
+		return list;
+	}
+	
+	public List<Product> search(String keyword)
+			throws Exception {
+		List<Product> list = new ArrayList<>();
+		
+		Connection con = getConnection();
+
+		PreparedStatement st;
+		st = con.prepareStatement(
+				"SELECT * FROM Product WHERE Product_Name LIKE ?");
+		st.setString(1,"%"+keyword+"%");
+		ResultSet rs = st.executeQuery();
+
+		while (rs.next()) {
+			Product product = new Product();
+			product.setProduct_id(rs.getInt("product_id"));
+			product.setProduct_image(rs.getString("product_image"));
+			product.setProduct_name(rs.getString("product_name"));
+			product.setProduct_price(rs.getInt("product_price"));
+			product.setProduct_description(rs.getString("product_description"));
+			list.add(product);
+		}
+		st.close();
+		con.close();
+
+		return list;
 	}
 }
