@@ -28,7 +28,7 @@
 		${item.product.product_price}円<br>
 		${item.product_number}個<br>
 		<input type="hidden" name="product_ids"
-			value="${item.product.product_id}">
+			value="${item.product.product_id}"><br>
 		<%-- <a href="Cartremove.action?product_id=${item.product.product_id}">
 		カートから削除
 		</a> --%>

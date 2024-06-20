@@ -25,25 +25,23 @@
 		value="検索">
 </form>
 
-<form action="/ShoppingSite/cartServlet" method="post">
-	<c:forEach var="product" items="${list}">
+<c:forEach var="product" items="${list}">
+	<form action="/ShoppingSite/cartServlet" method="post">
 		<p>
-			${product.product_id}<br>
-			<img src="${product.product_image}" alt="product_image" /><br>
-			${product.product_name}<br>
+			${product.product_id}<br> <img src="${product.product_image}"
+				alt="product_image" /><br> ${product.product_name}<br>
 			${product.product_price}円<br>
 			<%-- <select name="quantity_${product.product_id}">
 				<c:forEach begin="0" end="10" var="product_number">
 					<option value="${product_number}">${product_number}個</option>
 				</c:forEach>
 			</select><br> --%>
-			${product.product_description}<br>
-			<input type="hidden" name="product_id" value="${product.product_id}">
-		<input type="submit" value="カートに追加">
+			${product.product_description}<br> <input type="hidden"
+				name="product_id" value="${product.product_id}"> <input
+				type="submit" value="カートに追加">
 		</p>
-	</c:forEach>
-	
-</form>
+	</form>
+</c:forEach>
 
 <img src="/ShoppingSite/img/duffy_friends2.png">
 

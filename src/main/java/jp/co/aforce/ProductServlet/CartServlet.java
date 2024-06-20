@@ -32,7 +32,8 @@ public class CartServlet extends HttpServlet {
 		for (Item item : cart) {
 			if (item.getProduct().getProduct_id() == product_id) {
 				item.setProduct_number(item.getProduct_number() + 1);
-				request.getRequestDispatcher("/views/cart.jsp").forward(request, response);
+				response.sendRedirect("/ShoppingSite/views/cart.jsp");
+				return;
 			}
 		}
 
@@ -45,7 +46,7 @@ public class CartServlet extends HttpServlet {
 				cart.add(item);
 			}
 		}
-		request.getRequestDispatcher("/views/cart.jsp").forward(request, response);
+		response.sendRedirect("/ShoppingSite/views/cart.jsp");
 
 	}
 }
