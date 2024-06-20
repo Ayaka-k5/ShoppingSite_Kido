@@ -13,21 +13,21 @@ import jakarta.servlet.http.HttpSession;
 import jp.co.aforce.beans.Product;
 import jp.co.aforce.dao.ProductDAO;
 
-@WebServlet("/search")
-public class Search extends HttpServlet {
+@WebServlet("/searchServlet")
+public class SearchServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		try {
 			HttpSession session = request.getSession();
-			
-			String keyword=request.getParameter("keyword");
+
+			String keyword = request.getParameter("keyword");
 
 			ProductDAO dao = new ProductDAO();
-			List<Product> list2 = dao.search(keyword);
-			
-			session.setAttribute("list2", list2);
+			List<Product> list = dao.search(keyword);
+
+			session.setAttribute("list", list);
 
 			request.getRequestDispatcher("/views/product-search.jsp").forward(request, response);
 

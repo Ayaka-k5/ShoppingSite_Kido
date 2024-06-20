@@ -10,7 +10,7 @@
 			<li><a href="/ShoppingSite/views/productA.jsp">商品一覧</a></li>
 			<li><a href="/ShoppingSite/views/login_Customer.jsp">ログイン/新規登録</a></li>
 			<li><a href="/ShoppingSite/views/logout_Customer.jsp">ログアウト</a></li>
-			<li><a href="#">カート</a></li>
+			<li><a href="/ShoppingSite/views/cart.jsp">カート</a></li>
 		</ul>
 	</nav>
 </header>
@@ -20,19 +20,19 @@
 	商品一覧 <br>全2種類です
 </p>
 
-<form action="search" method="post">
-<input type="text" name="keyword">
-<input type="submit" value="検索">
+<form action="/ShoppingSite/searchServlet" method="post">
+	<input type="text" name="keyword"> <input type="submit"
+		value="検索">
 </form>
 
-<c:forEach var="product" items="${list2}">
-<p>
-${product.product_id}<br>
-<img src="${product.product_image}" alt="product_image" /><br>
-${product.product_name}<br>
-${product.product_price}円<br>
-${product.product_description}<br>
-</p>
+<c:forEach var="product" items="${list}">
+	<p>
+		${product.product_id}<br>
+		<img src="${product.product_image}" alt="product_image" /><br>
+		${product.product_name}<br>
+		${product.product_price}円<br>
+		${product.product_description}<br>
+	</p>
 </c:forEach>
 
 <p>

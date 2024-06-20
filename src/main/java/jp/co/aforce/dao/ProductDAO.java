@@ -34,17 +34,17 @@ public class ProductDAO extends DAO {
 
 		return list;
 	}
-	
+
 	public List<Product> search(String keyword)
 			throws Exception {
 		List<Product> list = new ArrayList<>();
-		
+
 		Connection con = getConnection();
 
 		PreparedStatement st;
 		st = con.prepareStatement(
 				"SELECT * FROM Product WHERE Product_Name LIKE ?");
-		st.setString(1,"%"+keyword+"%");
+		st.setString(1, "%" + keyword + "%");
 		ResultSet rs = st.executeQuery();
 
 		while (rs.next()) {
