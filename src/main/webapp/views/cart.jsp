@@ -25,15 +25,16 @@
 		${item.product.product_name}<br>
 		${item.product.product_price}円<br>
 		${item.product_number}個<br>
-		<input type="hidden" name="product_ids"
+		<input type="hidden" name="product_id"
 			value="${item.product.product_id}">
 		<br>
 		<form action="/ShoppingSite/CartDeleteServlet" method="get"
 			style="display: inline;">
+			<p>
 			<input type="hidden" name="product_id"
 				value="${item.product.product_id}">
 			<button type="submit">削除</button>
-			<br>
+			</p>
 		</form>
 	</c:forEach>
 

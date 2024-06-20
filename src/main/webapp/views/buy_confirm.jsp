@@ -11,9 +11,9 @@
 		${item.product.product_name}<br>
 		${item.product.product_price}円<br>
 		${item.product_number}個<br>
-		<input type="hidden" name="product_ids"
+		<%-- <input type="hidden" name="product_id"
 			value="${item.product.product_id}">
-		<br>
+		<br>--%>
 </c:forEach>
 	<p>
 		<input type="submit" value="購入">
