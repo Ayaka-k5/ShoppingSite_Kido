@@ -45,4 +45,8 @@
 
 <img src="/ShoppingSite/img/duffy_friends2.png">
 
+<p>
+	<button type="button" onclick="history.back()">戻る</button>
+</p>
+
 <%@include file="../footer.html"%>

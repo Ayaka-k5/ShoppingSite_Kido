@@ -21,4 +21,9 @@ public class Item implements Serializable {
 	public void setProduct_number(int product_number) {
 		this.product_number = product_number;
 	}
+
+	public void removeItem(String productId) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
 }

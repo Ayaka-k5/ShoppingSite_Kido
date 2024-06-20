@@ -27,11 +27,9 @@
 
 <c:forEach var="product" items="${list}">
 	<p>
-		${product.product_id}<br>
-		<img src="${product.product_image}" alt="product_image" /><br>
-		${product.product_name}<br>
-		${product.product_price}円<br>
-		${product.product_description}<br>
+		${product.product_id}<br> <img src="${product.product_image}"
+			alt="product_image" /><br> ${product.product_name}<br>
+		${product.product_price}円<br> ${product.product_description}<br>
 	</p>
 </c:forEach>
 

@@ -16,9 +16,7 @@
 </header>
 <h1>Hug Me</h1>
 
-<form action="buy" method="post">
-
-	<h1>カート</h1>
+<h1>カート</h1>
 
 	<c:forEach var="item" items="${cart}">
 		${item.product.product_id}<br>
@@ -28,15 +26,27 @@
 		${item.product.product_price}円<br>
 		${item.product_number}個<br>
 		<input type="hidden" name="product_ids"
-			value="${item.product.product_id}"><br>
-		<%-- <a href="Cartremove.action?product_id=${item.product.product_id}">
-		カートから削除
-		</a> --%>
+			value="${item.product.product_id}">
+		<br>
+		<form action="/ShoppingSite/CartDeleteServlet" method="get"
+			style="display: inline;">
+			<input type="hidden" name="product_id"
+				value="${item.product.product_id}">
+			<button type="submit">削除</button>
+			<br>
+		</form>
 	</c:forEach>
 
-	<input type="submit" value="購入">
+<p>
+	<button type=button
+		onclick="location.href='/ShoppingSite/views/buy_confirm.jsp'">購入</button>
+</p>
 </form>
 
 <img src="/ShoppingSite/img/duffy_friends2.png">
+
+<p>
+	<button type="button" onclick="history.back()">戻る</button>
+</p>
 
 <%@include file="../footer.html"%>
