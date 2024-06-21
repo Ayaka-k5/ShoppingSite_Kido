@@ -7,21 +7,12 @@
 	<p>商品名</p>
 	<input type="email" name="customer_mailaddress" required>
 
-	<p>パスワード</p>
+	<p>商品画像</p>
 	<input type="password" name="customer_password" required>
 
-	<p>姓</p>
+	<p>価格</p>
 	<input type="text" name="customer_lastname" required>
-
-	<p>名</p>
-	<input type="text" name="customer_firstname" required>
-
-	<p>電話番号</p>
-	<input type="text" name="customer_telephone" required>
-
-	<p>住所</p>
-	<input type="text" name="customer_address" required>
-
+	
 	<p>
 		<input type="submit" value="登録">
 	</p>
