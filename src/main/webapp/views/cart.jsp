@@ -19,25 +19,21 @@
 <h1>カート</h1>
 
 <c:forEach var="item" items="${cart}">
-		${item.product.product_id}<br>
-	<img src="${item.product.product_image}" alt="product_image" />
-	<br>
-		${item.product.product_name}<br>
-	<c:set var="tax"
-		value="${Math.round(item.product.product_price * 1.1)}"></c:set>
-		${tax}円（税込み）<br>
-		${item.product_number}個<br>
+	${item.product.product_id}<br>
+	<img src="${item.product.product_image}" alt="product_image" /><br>
+	${item.product.product_name}<br>
+	<c:set var="tax" value="${Math.round(item.product.product_price * 1.1)}"></c:set>
+	${tax}円（税込み）<br>
+	${item.product_number}個<br>
 	<c:set var="subTotal" value="${tax * item.product_number}"></c:set>
-		小計：${subTotal}
-		<c:set var="total" value="${total + subTotal}"></c:set>
+	小計：${subTotal}
+	<c:set var="total" value="${total + subTotal}"></c:set>
 	<input type="hidden" name="product_id"
 		value="${item.product.product_id}">
 	<br>
-	<form action="/ShoppingSite/cartDeleteServlet" method="get"
-		style="display: inline;">
+	<form action="/ShoppingSite/cartDeleteServlet" method="get" style="display: inline;">
 		<p>
-			<input type="hidden" name="product_id"
-				value="${item.product.product_id}">
+			<input type="hidden" name="product_id" value="${item.product.product_id}">
 			<button type="submit">削除</button>
 		</p>
 	</form>
