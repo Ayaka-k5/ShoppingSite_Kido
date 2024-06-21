@@ -24,6 +24,6 @@ public class Item implements Serializable {
 
 	public void removeItem(String productId) {
 		// TODO 自動生成されたメソッド・スタブ
-		
+
 	}
 }
