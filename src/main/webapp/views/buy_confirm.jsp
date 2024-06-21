@@ -5,7 +5,6 @@
 
 <p>購入しますか？</p>
 
-<%-- <form action="/ShoppingSite/buyServlet" method="post"> --%>
 <c:forEach var="item" items="${cart}">
 		${item.product.product_id}<br>
 	<img src="${item.product.product_image}" alt="product_image" />
@@ -17,10 +16,7 @@
 		value="${item.product.product_id}">
 	<br>
 </c:forEach>
-<%--<p>
-		<input type="submit" value="購入">
-	</p>
-</form> --%>
+
 <p>
 	<button type=button
 		onclick="location.href='/ShoppingSite/views/buy.jsp'">購入</button>

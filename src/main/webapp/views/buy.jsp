@@ -5,21 +5,22 @@
 
 <p>購入しました。</p>
 
-<c:forEach var="item" items="${cart}">
+<form action="/ShoppingSite/buyServlet" method="post">
+	<c:forEach var="item" items="${cart}">
 		${item.product.product_id}<br>
-	<img src="${item.product.product_image}" alt="product_image" />
-	<br>
+		<img src="${item.product.product_image}" alt="product_image" />
+		<br>
 		${item.product.product_name}<br>
 		${item.product.product_price}円<br>
 		${item.product_number}個<br>
-	<input type="hidden" name="product_id"
-		value="${item.product.product_id}">
-	<br>
-</c:forEach>
-<p>
-	<button type=button
-		onclick="location.href='/ShoppingSite/index_Customer.jsp'">トップページへ</button>
-</p>
+		<input type="hidden" name="product_id"
+			value="${item.product.product_id}">
+		<br>
+	</c:forEach>
+	<p>
+		<input type="submit" value="商品一覧ページへ">
+	</p>
+</form>
 
 
 <%@include file="../footer.html"%>
