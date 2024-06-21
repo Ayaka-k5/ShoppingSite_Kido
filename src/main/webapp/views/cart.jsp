@@ -28,7 +28,7 @@
 	<input type="hidden" name="product_id"
 		value="${item.product.product_id}">
 	<br>
-	<form action="/ShoppingSite/CartDeleteServlet" method="get"
+	<form action="/ShoppingSite/cartDeleteServlet" method="get"
 		style="display: inline;">
 		<p>
 			<input type="hidden" name="product_id"
