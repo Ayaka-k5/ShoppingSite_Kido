@@ -4,7 +4,7 @@
 <h1>商品管理 登録</h1>
 
 <form action="/ShoppingSite/confirmServlet_Customer" method="post">
-	<p>メールアドレス</p>
+	<p>商品名</p>
 	<input type="email" name="customer_mailaddress" required>
 
 	<p>パスワード</p>
