@@ -26,11 +26,16 @@
 </form>
 
 <c:forEach var="product" items="${list}">
-	<p>
-		${product.product_id}<br> <img src="${product.product_image}"
-			alt="product_image" /><br> ${product.product_name}<br>
-		${product.product_price}円<br> ${product.product_description}<br>
-	</p>
+	<form action="/ShoppingSite/cartServlet" method="post">
+		<p>
+			${product.product_id}<br> <img src="${product.product_image}"
+				alt="product_image" /><br> ${product.product_name}<br>
+			${product.product_price}円（税抜き）<br>
+			${product.product_description}<br> <input type="hidden"
+				name="product_id" value="${product.product_id}"> <input
+				type="submit" value="カートに追加">
+		</p>
+	</form>
 </c:forEach>
 
 <p>
