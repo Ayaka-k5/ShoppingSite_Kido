@@ -3,15 +3,18 @@
 
 <h1>商品管理 登録</h1>
 
-<form action="/ShoppingSite/confirmServlet_Customer" method="post">
-	<p>商品画像</p>
-	<input type="image" name="customer_password" required>
-
+<form action="/ShoppingSite/manageConfirmServlet" method="post">
 	<p>商品名</p>
-	<input type="text" name="product_mailaddress" required>
+	<input type="text" name="product_name" required>
 
 	<p>価格</p>
-	<input type="text" name="customer_lastname" required>
+	<input type="text" name="product_price" required>
+	
+	<p>商品説明</p>
+	<input type="text" name="product_description" required>
+	
+	<p>在庫</p>
+	<input type="text" name="product_stock" required>
 
 	<p>
 		<input type="submit" value="登録">
