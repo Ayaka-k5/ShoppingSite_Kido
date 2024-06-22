@@ -1,9 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@include file="../css/style.css"%>
 <%@include file="../header.html"%>
 
-<script type="text/javascript">
-	window.location.href = "http://localhost:8080/ShoppingSite/manageServlet1";
-</script>
+<h1>商品管理</h1>
+
+<p>
+	<button type=button
+		onclick="location.href='/ShoppingSite/views/manage.jsp'">登録</button>
+</p>
+
+<p>
+	<button type="button" onclick="history.back()">戻る</button>
+</p>
 
 <%@include file="../footer.html"%>

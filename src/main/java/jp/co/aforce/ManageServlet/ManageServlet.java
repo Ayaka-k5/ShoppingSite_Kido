@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jp.co.aforce.beans.Manage;
-import jp.co.aforce.dao.AdminManage;
+import jp.co.aforce.dao.ManageDAO;
 
 @WebServlet("/manageServlet")
 public class ManageServlet extends HttpServlet {
@@ -28,7 +28,6 @@ public class ManageServlet extends HttpServlet {
 			String product_description = request.getParameter("product_description");
 			String product_stockParam = request.getParameter("product_stock");
 			int product_stock = 0;
-			//System.out.println(product_name);
 			try {
 				product_price = Integer.parseInt(product_priceParam);
 			} catch (NumberFormatException e) {
@@ -40,12 +39,11 @@ public class ManageServlet extends HttpServlet {
 			} catch (NumberFormatException e) {
 				return;
 			}
-			AdminManage dao = new AdminManage();
+			ManageDAO dao = new ManageDAO();
 
 			// 新規登録を行う
 			int result = dao.insert(product_name, product_price,
 					product_description, product_stock);
-			System.out.println(result);
 			if (result > 0) {
 				// 登録に成功した場合、成功ページに遷移
 				session.setAttribute("manage", new Manage());
