@@ -29,7 +29,7 @@
 	<form action="/ShoppingSite/cartServlet" method="post">
 		<p>
 			${product.product_id}<br>
-			<img src="${product.product_image}" alt="product_image" /><br>
+			<img src="/ShoppingSite/img/${product.product_id}.jpg" alt="product_image" /><br>
 			${product.product_name}<br>
 			${product.product_price}円（税抜き）<br>
 			${product.product_description}<br>

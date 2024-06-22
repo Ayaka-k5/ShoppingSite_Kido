@@ -7,7 +7,7 @@
 
 <c:forEach var="item" items="${cart}">
 	${item.product.product_id}<br>
-	<img src="${item.product.product_image}" alt="product_image" /><br>
+	<img src="/ShoppingSite/img/${item.product.product_id}.jpg" alt="product_image" /><br>
 	${item.product.product_name}<br>
 	<c:set var="tax" value="${Math.round(item.product.product_price * 1.1)}"></c:set>
 	${tax}円（税込み）<br>
