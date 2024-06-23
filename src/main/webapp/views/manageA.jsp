@@ -15,11 +15,11 @@
 <h1>Hug Me</h1>
 
 <h1>商品管理</h1>
-
-<p>
-	<button type=button
-		onclick="location.href='/ShoppingSite/views/manage.jsp'">登録</button>
-</p>
+<form action="/ShoppingSite/manageValidation" method="post">
+	<p>
+		<input type="submit" value="登録">
+	</p>
+</form>
 
 <p>
 	<button type="button" onclick="history.back()">戻る</button>
