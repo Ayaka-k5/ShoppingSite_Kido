@@ -20,7 +20,11 @@ public class CartServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-
+		
+		if(session.getAttribute("login_Customer")==null) {
+			request.getRequestDispatcher("/views/login_Customer.jsp").forward(request, response);	
+		}
+		
 		int product_id = Integer.parseInt(request.getParameter("product_id"));
 
 		List<Item> cart = (List<Item>) session.getAttribute("cart");
