@@ -4,7 +4,7 @@
 <h1>登録しますか？</h1>
 
 <form action="/ShoppingSite/manageServlet" method="post">
-<p>
+	<p>
 		商品名:
 		<%=request.getParameter("product_name")%>
 	</p>
