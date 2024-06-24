@@ -28,7 +28,7 @@ public class InformationServlet_Manager extends HttpServlet {
 			
 			InformationDAO_Manager dao = new InformationDAO_Manager();
 			
-			int line=dao.mailsearch(manager_mailaddress);
+			int line=dao.mailSearch(manager_mailaddress);
 			if (line == 0) {
 				System.out.println("登録しました。");
 			} else {

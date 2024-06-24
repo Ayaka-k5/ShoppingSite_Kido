@@ -30,7 +30,7 @@ public class InformationServlet_Customer extends HttpServlet {
 
 			InformationDAO_Customer dao = new InformationDAO_Customer();
 
-			int line=dao.mailsearch(customer_mailaddress);
+			int line=dao.mailSearch(customer_mailaddress);
 			if (line == 0) {
 				System.out.println("登録しました。");
 			} else {

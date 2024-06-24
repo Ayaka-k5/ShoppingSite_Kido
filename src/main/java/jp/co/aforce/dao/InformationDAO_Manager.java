@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class InformationDAO_Manager extends DAO {
-	public int mailsearch(String manager_mailaddress) throws Exception {
+	public int mailSearch(String manager_mailaddress) throws Exception {
 		Connection con = getConnection();
 		
 		PreparedStatement st;
