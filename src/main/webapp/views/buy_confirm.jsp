@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib prefix="c" uri="jakarta.tags.core"%>
-<%@include file="../css/style.css"%>
 <%@include file="../header.html"%>
 
 <p>購入しますか？</p>
