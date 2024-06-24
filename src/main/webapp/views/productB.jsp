@@ -39,10 +39,10 @@
 	</form>
 </c:forEach>
 
+<img src="/ShoppingSite/img/duffy_friends2.png">
+
 <p>
 	<button type="button" onclick="history.back()">戻る</button>
 </p>
-
-<img src="/ShoppingSite/img/duffy_friends2.png">
 
 <%@include file="../footer.html"%>

@@ -21,6 +21,10 @@ public class ProductServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			HttpSession session = request.getSession();
+			
+			if(session.getAttribute("login_Customer")==null) {
+				request.getRequestDispatcher("/views/login_Customer.jsp").forward(request, response);	
+			}
 
 			ProductDAO dao = new ProductDAO();
 			List<Product> list = dao.search();

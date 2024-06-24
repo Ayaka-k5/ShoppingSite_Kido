@@ -7,7 +7,7 @@
 
 <c:forEach var="item" items="${cart}">
 	${item.product.product_id}<br>
-	<img src="${item.product.product_image}" alt="product_image" /><br>
+	<img src="/ShoppingSite/img/${item.product.product_id}.jpg" alt="product_image" /><br>
 	${item.product.product_name}<br>
 	<c:set var="tax" value="${Math.round(item.product.product_price * 1.1)}"></c:set>
 	${tax}円（税込み）<br>
@@ -16,12 +16,12 @@
 	小計：${subTotal}
 	<c:set var="total" value="${total + subTotal}"></c:set>
 	<input type="hidden" name="product_id" value="${item.product.product_id}"><br>
-	<form action="/ShoppingSite/cartDeleteServlet" method="get" style="display: inline;">
+	<%-- <form action="/ShoppingSite/cartDeleteServlet" method="get" style="display: inline;">
 		<p>
 			<input type="hidden" name="product_id" value="${item.product.product_id}">
 			<button type="submit">削除</button>
 		</p>
-	</form>
+	</form>--%>
 </c:forEach>
 
 合計：${total}円

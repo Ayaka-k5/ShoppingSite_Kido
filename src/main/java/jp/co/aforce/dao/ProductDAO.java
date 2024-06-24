@@ -23,7 +23,6 @@ public class ProductDAO extends DAO {
 		while (rs.next()) {
 			Product product = new Product();
 			product.setProduct_id(rs.getInt("product_id"));
-			product.setProduct_image(rs.getString("product_image"));
 			product.setProduct_name(rs.getString("product_name"));
 			product.setProduct_price(rs.getInt("product_price"));
 			product.setProduct_description(rs.getString("product_description"));
@@ -50,7 +49,6 @@ public class ProductDAO extends DAO {
 		while (rs.next()) {
 			Product product = new Product();
 			product.setProduct_id(rs.getInt("product_id"));
-			product.setProduct_image(rs.getString("product_image"));
 			product.setProduct_name(rs.getString("product_name"));
 			product.setProduct_price(rs.getInt("product_price"));
 			product.setProduct_description(rs.getString("product_description"));
