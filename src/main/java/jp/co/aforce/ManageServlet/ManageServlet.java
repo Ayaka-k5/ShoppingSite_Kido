@@ -23,19 +23,19 @@ public class ManageServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			
 			String product_name = request.getParameter("product_name");
-			String product_priceParam = request.getParameter("product_price");
+			String product_price_param = request.getParameter("product_price");
 			int product_price = 0;
 			String product_description = request.getParameter("product_description");
-			String product_stockParam = request.getParameter("product_stock");
+			String product_stock_param = request.getParameter("product_stock");
 			int product_stock = 0;
 			try {
-				product_price = Integer.parseInt(product_priceParam);
+				product_price = Integer.parseInt(product_price_param);
 			} catch (NumberFormatException e) {
 				return;
 			}
 
 			try {
-				product_stock = Integer.parseInt(product_stockParam);
+				product_stock = Integer.parseInt(product_stock_param);
 			} catch (NumberFormatException e) {
 				return;
 			}

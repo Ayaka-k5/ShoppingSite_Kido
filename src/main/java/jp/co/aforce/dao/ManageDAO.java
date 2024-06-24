@@ -21,7 +21,6 @@ public class ManageDAO extends DAO {
 		st.close();
 		con.close();
 
-		System.out.println(result);
 		return result;
 
 	}
