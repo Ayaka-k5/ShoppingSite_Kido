@@ -15,7 +15,11 @@ form{
 }
 
 nav{
-	text-align: center;
+	width: fit-content;
+	margin: auto;
+}
+nav >ul{
+	padding-left: 0;
 }
 nav >ul >li{
 	list-style: none;
