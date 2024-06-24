@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+body{
+	background-color: white;
+}
 h1{
 	text-align: center;
 }
@@ -20,5 +22,6 @@ nav >ul >li{
 }
 
 img{
-	text-align: center;
+	margin: auto;
+	display: block;
 }

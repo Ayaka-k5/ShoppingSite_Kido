@@ -5,6 +5,7 @@
 <p>購入しますか？</p>
 
 <c:forEach var="item" items="${cart}">
+	<p>
 	${item.product.product_id}<br>
 	<img src="/ShoppingSite/img/${item.product.product_id}.jpg" alt="product_image" /><br>
 	${item.product.product_name}<br>
@@ -21,9 +22,10 @@
 			<button type="submit">削除</button>
 		</p>
 	</form>--%>
+	</p>
 </c:forEach>
 
-合計：${total}円
+<p>合計：${total}円</p>
 
 <p>
 	<button type=button
