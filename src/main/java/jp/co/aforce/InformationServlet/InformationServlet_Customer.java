@@ -30,6 +30,15 @@ public class InformationServlet_Customer extends HttpServlet {
 
 			InformationDAO_Customer dao = new InformationDAO_Customer();
 
+			int line=dao.mailSearch(customer_mailaddress);
+			if (line == 0) {
+				System.out.println("登録しました。");
+			} else {
+				request.getRequestDispatcher("/views/information-error.jsp")
+				.forward(request, response);
+				return;
+			}
+			
 			// 新規登録を行う
 			int result = dao.insert(customer_mailaddress, customer_password,
 					customer_lastname, customer_firstname, customer_telephone,
