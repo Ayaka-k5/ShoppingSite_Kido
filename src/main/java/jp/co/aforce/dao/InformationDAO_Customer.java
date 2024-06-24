@@ -5,13 +5,26 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class InformationDAO_Customer extends DAO {
+	public int mailsearch(String customer_mailaddress) throws Exception {
+		Connection con = getConnection();
+		
+		PreparedStatement st;
+		st = con.prepareStatement("SELECT * FROM Customer where Customer_Mailaddress = ?");
+		st.setString(1, customer_mailaddress);
+		ResultSet rs = st.executeQuery();
+		int line = 0;
+		while (rs.next()) {
+			line++;
+		}
+		
+		return line;
+	}
+	
 	public int insert(String customer_mailaddress, String customer_password, String customer_lastname,
 			String customer_firstname, String customer_telephone, String customer_address)
 			throws Exception {
 
 		Connection con = getConnection();
-
-		con.setAutoCommit(false);
 		
 		PreparedStatement st;
 		st = con.prepareStatement(
@@ -23,24 +36,6 @@ public class InformationDAO_Customer extends DAO {
 		st.setString(5, customer_telephone);
 		st.setString(6, customer_address);
 		int result = st.executeUpdate();
-		
-		st = con.prepareStatement("SELECT * FROM Customer where Customer_Mailaddress = ?");
-		st.setString(1, customer_mailaddress);
-		ResultSet rs = st.executeQuery();
-		int line = 0;
-		while (rs.next()) {
-			line++;
-		}
-		
-		if (line == 1) {
-			con.commit();
-			System.out.println("登録しました。");
-		} else {
-			con.rollback();
-			System.out.println("すでに登録されています。");
-		}
-
-		con.setAutoCommit(true);
 
 		st.close();
 		con.close();

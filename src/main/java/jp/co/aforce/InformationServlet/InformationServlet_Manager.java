@@ -27,6 +27,15 @@ public class InformationServlet_Manager extends HttpServlet {
 			String manager_firstname = request.getParameter("manager_firstname");
 			
 			InformationDAO_Manager dao = new InformationDAO_Manager();
+			
+			int line=dao.mailsearch(manager_mailaddress);
+			if (line == 0) {
+				System.out.println("登録しました。");
+			} else {
+				request.getRequestDispatcher("/views/information-error.jsp")
+				.forward(request, response);
+				return;
+			}
 
 			// 新規登録を行う
 			int result = dao.insert(manager_mailaddress, manager_password,
