@@ -1,8 +1,45 @@
 @charset "UTF-8";
 
-header{
-	background: #fff3b8;
+html {
+	background-color: #fff3b8;
 }
-h1{
-	background: #fff3b8;
+nav>ul>li a:hover {
+	color: #c49a6a;
+	text-decoration: none;
+}
+header {
+	background: #eedcb3;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 110%;
+}
+
+.indexCustomer {
+	background: #eedcb3;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1 {
+	font-size: 300%;
+	color: #c49a6a;
+}
+
+p {
+	font-size: 130%;
+}
+
+.mainImage {
+	height: auto;
+	width: 80%;
 }

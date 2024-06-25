@@ -1,38 +1,35 @@
 @charset "UTF-8";
-h1{
-	text-align: center;
-	color: #bda393;
-}
 
-p{
+h1 {
 	text-align: center;
 }
 
-form{
+p {
 	text-align: center;
 }
 
-nav{
+form {
+	text-align: center;
+}
+
+nav {
 	width: fit-content;
 	margin: auto;
 }
-nav >ul{
+
+nav>ul {
 	padding-left: 0;
 }
-nav >ul >li{
+
+nav>ul>li {
 	list-style: none;
 }
 
-nav >ul >li a{
+nav>ul>li a {
 	color: black;
 }
 
-nav >ul >li a:hover{
-	color: burlywood;
-	text-decoration: none;
-}
-
-img{
+img {
 	margin: auto;
 	display: block;
 }
