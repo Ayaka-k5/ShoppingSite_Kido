@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
 html {
-	background-color: #fff3b8;
+	background-color: #fff4b3;
 }
 
 nav>ul>li a:hover {
-	color: #c49a6a;
+	color: #ffad33;
 	text-decoration: none;
 }
 
 header {
-	background: #eedcb3;
+	background: #ffec80;
 	width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
@@ -21,8 +21,8 @@ header {
 	font-size: 110%;
 }
 
-.indexCustomer {
-	background: #eedcb3;
+.productCustomer {
+	background: #ffec80;
 	width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
@@ -34,14 +34,27 @@ header {
 
 h1 {
 	font-size: 300%;
-	color: #c49a6a;
+	color: #ffad33;
 }
 
 p {
 	font-size: 130%;
 }
 
+.form {
+	font-size: 120%;
+}
+
+.productButton {
+	font-size: 80%;
+}
+
+.productImage {
+	height: auto;
+	width: 40%;
+}
+
 .mainImage {
 	height: auto;
-	width: 80%;
+	width: 30%;
 }
