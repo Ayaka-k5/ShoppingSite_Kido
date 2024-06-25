@@ -1,9 +1,7 @@
 @charset "UTF-8";
-body{
-	background-color: white;
-}
 h1{
 	text-align: center;
+	color: burlywood;
 }
 
 p{
@@ -23,6 +21,15 @@ nav >ul{
 }
 nav >ul >li{
 	list-style: none;
+}
+
+nav >ul >li a{
+	color: black;
+}
+
+nav >ul >li a:hover{
+	color: burlywood;
+	text-decoration: none;
 }
 
 img{

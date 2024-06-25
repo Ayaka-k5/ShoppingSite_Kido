@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<link href="/ShoppingSite/css/index_customer.css" rel="stylesheet">
 <%@include file="../header.html"%>
 
 <header>
