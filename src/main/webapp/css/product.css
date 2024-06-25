@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+html {
+	background-color: #fff4b3;
+}
+
+nav>ul>li a:hover {
+	color: #ffad33;
+	text-decoration: none;
+}
+
+header {
+	background: #ffec80;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 110%;
+}
+
+.productCustomer {
+	background: #ffec80;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1 {
+	font-size: 300%;
+	color: #ffad33;
+}
+
+p {
+	font-size: 130%;
+}
+
+.form {
+	font-size: 120%;
+}
+
+.productButton {
+	font-size: 80%;
+}
+
+.productImage {
+	height: auto;
+	width: 40%;
+}
+
+.mainImage {
+	height: auto;
+	width: 30%;
+}

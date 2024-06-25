@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+h1 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+nav {
+	width: fit-content;
+	margin: auto;
+}
+
+nav>ul {
+	padding-left: 0;
+}
+
+nav>ul>li {
+	list-style: none;
+}
+
+nav>ul>li a {
+	color: black;
+}
+
+img {
+	margin: auto;
+	display: block;
+}

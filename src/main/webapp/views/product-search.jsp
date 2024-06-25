@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<link href="/ShoppingSite/css/product.css" rel="stylesheet">
 <%@taglib prefix="c" uri="jakarta.tags.core"%>
-<%@include file="../css/style.css"%>
 <%@include file="../header.html"%>
 
 <header>
@@ -14,6 +14,8 @@
 		</ul>
 	</nav>
 </header>
+
+<div class="productCustomer">
 <h1>Hug Me</h1>
 
 <p>
@@ -21,28 +23,32 @@
 </p>
 
 <form action="/ShoppingSite/searchServlet" method="post">
-	<input type="text" name="keyword"> <input type="submit"
-		value="検索">
+	<input class="form" type="text" name="keyword">
+	<input class="productButton" type="submit" value="検索">
 </form>
+</div>
 
 <c:forEach var="product" items="${list}">
+<div class="productCustomer">
 	<form action="/ShoppingSite/cartServlet" method="post">
 		<p>
-			${product.product_id}<br>
-			<img src="/ShoppingSite/img/${product.product_id}.jpg" alt="product_image" /><br>
+			<img  class="productImage" src="/ShoppingSite/img/${product.product_id}.jpg" alt="product_image" /><br>
 			${product.product_name}<br>
 			${product.product_price}円（税抜き）<br>
 			${product.product_description}<br>
 			<input type="hidden" name="product_id" value="${product.product_id}">
-			<input type="submit" value="カートに追加">
+			<input class="productButton" type="submit" value="カートに追加">
 		</p>
 	</form>
+	</div>
 </c:forEach>
 
+<div class="productCustomer">
 <p>
-	<button type="button" onclick="history.back()">戻る</button>
+	<button class="productButton" type="button" onclick="history.back()">戻る</button>
 </p>
 
-<img src="/ShoppingSite/img/duffy_friends2.png">
+<img class="mainImage" src="/ShoppingSite/img/duffy_friends2.png">
+</div>
 
 <%@include file="../footer.html"%>

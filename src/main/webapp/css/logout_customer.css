@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+html {
+	background-color: #cab8d9;
+}
+
+.logoutCustomer {
+	background: #f4e6ff;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1 {
+	font-size: 300%;
+	color: #8200e6;
+}
+
+p {
+	font-size: 130%;
+}
+
+.logoutButton {
+	font-size: 80%;
+}

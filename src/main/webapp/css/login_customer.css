@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+html {
+	background-color: #fff2f2;
+}
+
+.loginCustomer {
+	background: #fcd8d4;
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1 {
+	font-size: 300%;
+	color: #b06a83;
+}
+
+p {
+	font-size: 130%;
+}
+
+.form {
+	font-size: 120%;
+}
+
+.loginButton {
+	font-size: 80%;
+}

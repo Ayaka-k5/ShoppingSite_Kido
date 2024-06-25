@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<%@include file="../css/style.css"%>
+<link href="/ShoppingSite/css/index_customer.css" rel="stylesheet">
 <%@include file="../header.html"%>
 
 <header>
@@ -13,12 +13,15 @@
 		</ul>
 	</nav>
 </header>
-<h1>Hug Me</h1>
 
-<img src="img/duffy_friends1.png">
+<div class="indexCustomer">
+	<h1>Hug Me</h1>
 
-<p>
-	ダッフィーフレンズのぬいぐるみを販売しているサイトです。
-</p>
+	<img class="mainImage" src="img/duffy_friends1.png">
+
+	<p>
+		ダッフィーフレンズのぬいぐるみを販売しているサイトです。
+	</p>
+</div>
 
 <%@include file="../footer.html"%>
