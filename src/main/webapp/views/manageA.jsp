@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@taglib prefix="c" uri="jakarta.tags.core"%>
 <%@include file="../header.html"%>
 
 <header>
@@ -14,11 +15,24 @@
 <h1>Hug Me</h1>
 
 <h1>商品管理</h1>
-<form action="/ShoppingSite/manageValidation" method="post">
-	<p>
-		<input type="submit" value="登録">
-	</p>
-</form>
+
+<p>
+	<button type=button
+		onclick="location.href='/ShoppingSite/views/manage.jsp'">登録</button>
+</p>
+
+<c:forEach var="manage" items="${ManageList}">
+	<form action="/ShoppingSite/manageDeleteServlet" method="post">
+		<p>
+			<img src="/ShoppingSite/img/${manage.product_id}.jpg" alt="product_image" /><br>
+			${manage.product_name}<br>
+			${manage.product_price}円（税抜き）<br>
+			${manage.product_description}<br>
+			<input type="hidden" name="product_id" value="${manage.product_id}">
+			<input type="submit" value="削除">
+		</p>
+	</form>
+</c:forEach>
 
 <p>
 	<button type="button" onclick="history.back()">戻る</button>
