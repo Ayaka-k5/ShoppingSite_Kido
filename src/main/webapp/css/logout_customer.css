@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 html {
-	background-color: #9ce6ac;
+	background-color: #cab8d9;
 }
 
-.informationCustomer {
-	background: #ccffd6;
+.logoutCustomer {
+	background: #f4e6ff;
 	width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
@@ -17,7 +17,7 @@ html {
 
 h1 {
 	font-size: 300%;
-	color: #578060;
+	color: #8200e6;
 }
 
 p {
@@ -28,6 +28,6 @@ p {
 	font-size: 120%;
 }
 
-.informationButton {
+.logoutButton {
 	font-size: 80%;
 }
