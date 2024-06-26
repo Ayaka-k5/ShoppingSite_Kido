@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
 
-<p>登録しました</p>
+<p>削除しました</p>
 
 <p>
 	<button type=button
