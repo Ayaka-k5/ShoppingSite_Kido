@@ -23,8 +23,8 @@
 	</p>
 
 	<form action="/ShoppingSite/searchServlet" method="post">
-		<input class="form" type="text" name="keyword"> <input
-			class="productButton" type="submit" value="検索">
+		<input class="form" type="text" name="keyword">
+		<input class="productButton" type="submit" value="検索">
 	</form>
 </div>
 
