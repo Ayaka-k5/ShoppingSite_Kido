@@ -4,9 +4,10 @@
 
 <div class="informationCustomer">
 	<p>入力内容が間違っているかすでに登録されています。</p>
-	
+
 	<p>
-		<button class="informationButton" type="button" onclick="history.back()">戻る</button>
+		<button class="informationButton" type="button"
+			onclick="history.back()">戻る</button>
 	</p>
 </div>
 

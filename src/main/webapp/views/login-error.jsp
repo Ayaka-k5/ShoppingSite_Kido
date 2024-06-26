@@ -3,9 +3,7 @@
 <%@include file="../header.html"%>
 
 <div class="loginCustomer">
-	<p>
-		メールアドレスまたはパスワードが違います。
-	</p>
+	<p>メールアドレスまたはパスワードが違います。</p>
 	<p>
 		<button class="loginButton" type="button" onclick="history.back()">戻る</button>
 	</p>

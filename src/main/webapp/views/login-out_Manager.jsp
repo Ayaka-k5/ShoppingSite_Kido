@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<link href="/ShoppingSite/css/login_customer.css" rel="stylesheet">
 <%@include file="../header.html"%>
 
-<p>ログインしました</p>
+<div class="loginCustomer">
+	<p>ログインしました</p>
 
-<p>
-	<button type=button
-		onclick="location.href='/ShoppingSite/index_Manager.jsp'">トップページへ</button>
-</p>
+	<p>
+		<button class="loginButton" type=button
+			onclick="location.href='/ShoppingSite/index_Manager.jsp'">トップページへ</button>
+	</p>
+</div>
 
 <%@include file="../footer.html"%>

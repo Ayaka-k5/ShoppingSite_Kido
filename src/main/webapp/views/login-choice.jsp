@@ -3,12 +3,14 @@
 <%@include file="../header.html"%>
 
 <div class="indexCustomer">
-<h1>ログイン</h1>
+	<h1>ログイン</h1>
 
-<p>
-	<button  class="indexButton" onclick="location.href='./login_Customer.jsp'">お客様</button>
-	<button  class="indexButton" onclick="location.href='./login_Manager.jsp'">管理者</button>
-</p>
+	<p>
+		<button class="indexButton"
+			onclick="location.href='./login_Customer.jsp'">お客様</button>
+		<button class="indexButton"
+			onclick="location.href='./login_Manager.jsp'">管理者</button>
+	</p>
 </div>
 
 <%@include file="../footer.html"%>
