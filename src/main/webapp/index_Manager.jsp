@@ -9,6 +9,7 @@
 			<li><a href="/ShoppingSite/views/manageStart.jsp">商品管理</a></li>
 			<li><a href="/ShoppingSite/views/login_Manager.jsp">ログイン/新規登録</a></li>
 			<li><a href="/ShoppingSite/views/logout_Manager.jsp">ログアウト</a></li>
+		</ul>
 	</nav>
 </header>
 <div class="indexCustomer">
