@@ -29,6 +29,9 @@
 			${manage.product_price}円（税抜き）<br>
 			${manage.product_description}<br>
 			<input type="hidden" name="product_id" value="${manage.product_id}">
+			<input type="hidden" name="product_name" value="${manage.product_name}">
+			<input type="hidden" name="product_price" value="${manage.product_price}">
+			<input type="hidden" name="product_description" value="${manage.product_description}">
 			<input type="submit" value="削除">
 		</p>
 	</form>
