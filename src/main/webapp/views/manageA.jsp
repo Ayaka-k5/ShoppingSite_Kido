@@ -21,7 +21,7 @@
 		onclick="location.href='/ShoppingSite/views/manage.jsp'">登録</button>
 </p>
 
-<c:forEach var="manage" items="${ManageList}">
+<c:forEach var="manage" items="${manageList}">
 	<form action="/ShoppingSite/manageDeleteServlet" method="post">
 		<p>
 			<img src="/ShoppingSite/img/${manage.product_id}.jpg" alt="product_image" /><br>

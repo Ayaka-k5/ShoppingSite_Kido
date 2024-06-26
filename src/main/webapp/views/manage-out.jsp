@@ -5,7 +5,7 @@
 
 <p>
 	<button type=button
-		onclick="location.href='/ShoppingSite/views/manageA.jsp'">商品管理ページへ</button>
+		onclick="location.href='/ShoppingSite/views/manageStart.jsp'">商品管理ページへ</button>
 </p>
 
 <%@include file="../footer.html"%>
