@@ -11,6 +11,10 @@
 		<button class="indexButton"
 			onclick="location.href='./login_Manager.jsp'">管理者</button>
 	</p>
+	
+	<p>
+		<button class="backButton" type="button" onclick="history.back()">戻る</button>
+	</p>
 </div>
 
 <%@include file="../footer.html"%>

@@ -7,7 +7,7 @@
 		<ul>
 			<li><a href="/ShoppingSite/index_Customer.jsp">Hug Me</a></li>
 			<li><a href="/ShoppingSite/views/productA.jsp">商品一覧</a></li>
-			<li><a href="/ShoppingSite/views/login_Customer.jsp">ログイン/新規登録</a></li>
+			<li><a href="/ShoppingSite/views/login-choice.jsp">ログイン/新規登録</a></li>
 			<li><a href="/ShoppingSite/views/logout_Customer.jsp">ログアウト</a></li>
 			<li><a href="/ShoppingSite/views/cart.jsp">カート</a></li>
 		</ul>
