@@ -31,7 +31,7 @@ public class ManageListServlet extends HttpServlet {
 
 			session.setAttribute("manageList", manageList);
 
-			request.getRequestDispatcher("/views/manageA.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/manageList.jsp").forward(request, response);
 
 		} catch (Exception e) {
 			e.printStackTrace(out);
