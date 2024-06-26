@@ -8,10 +8,10 @@ import java.util.List;
 import jp.co.aforce.beans.ManageList;
 
 public class ManageDeleteDAO extends DAO {
-	public List<ManageList> search()
+	public int search(int product_id)
 			throws Exception {
-		List<ManageList> manageDelete = new ArrayList<>();
-
+		List<ManageList> list = new ArrayList<>();
+		
 		Connection con = getConnection();
 
 		PreparedStatement st;

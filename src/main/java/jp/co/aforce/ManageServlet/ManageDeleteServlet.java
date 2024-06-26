@@ -16,7 +16,7 @@ import jp.co.aforce.dao.ManageDeleteDAO;
 @WebServlet("/manageDeleteServlet")
 public class ManageDeleteServlet extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
 		try {
