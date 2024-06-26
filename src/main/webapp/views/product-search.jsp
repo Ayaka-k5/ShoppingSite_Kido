@@ -16,39 +16,40 @@
 </header>
 
 <div class="productCustomer">
-<h1>Hug Me</h1>
+	<h1>Hug Me</h1>
 
-<p>
-	商品一覧 <br>全2種類です
-</p>
+	<p>
+		商品一覧 <br>全2種類です
+	</p>
 
-<form action="/ShoppingSite/searchServlet" method="post">
-	<input class="form" type="text" name="keyword">
-	<input class="productButton" type="submit" value="検索">
-</form>
+	<form action="/ShoppingSite/searchServlet" method="post">
+		<input class="form" type="text" name="keyword"> <input
+			class="productButton" type="submit" value="検索">
+	</form>
 </div>
 
 <c:forEach var="product" items="${list}">
-<div class="productCustomer">
-	<form action="/ShoppingSite/cartServlet" method="post">
-		<p>
-			<img  class="productImage" src="/ShoppingSite/img/${product.product_id}.jpg" alt="product_image" /><br>
-			${product.product_name}<br>
-			${product.product_price}円（税抜き）<br>
-			${product.product_description}<br>
-			<input type="hidden" name="product_id" value="${product.product_id}">
-			<input class="productButton" type="submit" value="カートに追加">
-		</p>
-	</form>
+	<div class="productCustomer">
+		<form action="/ShoppingSite/cartServlet" method="post">
+			<p>
+				<img class="productImage" src="/ShoppingSite/img/${product.product_id}.jpg"
+					alt="product_image" /><br>
+				${product.product_name}<br>
+				${product.product_price}円（税抜き）<br>
+				${product.product_description}<br>
+				<input type="hidden" name="product_id" value="${product.product_id}">
+				<input class="productButton" type="submit" value="カートに追加">
+			</p>
+		</form>
 	</div>
 </c:forEach>
 
 <div class="productCustomer">
-<p>
-	<button class="productButton" type="button" onclick="history.back()">戻る</button>
-</p>
+	<p>
+		<button class="productButton" type="button" onclick="history.back()">戻る</button>
+	</p>
 
-<img class="mainImage" src="/ShoppingSite/img/duffy_friends2.png">
+	<img class="mainImage" src="/ShoppingSite/img/duffy_friends2.png">
 </div>
 
 <%@include file="../footer.html"%>

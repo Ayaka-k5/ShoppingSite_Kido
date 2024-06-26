@@ -3,12 +3,12 @@
 <%@include file="../header.html"%>
 
 <div class="logoutCustomer">
-<p>すでにログアウトしています。</p>
+	<p>すでにログアウトしています。</p>
 
-<p>
-	<button class="logoutButton" type=button
-		onclick="location.href='/ShoppingSite/views/login_Customer.jsp'">ログインページへ</button>
-</p>
+	<p>
+		<button class="logoutButton" type=button
+			onclick="location.href='/ShoppingSite/views/login_Customer.jsp'">ログインページへ</button>
+	</p>
 </div>
 
 <%@include file="../footer.html"%>

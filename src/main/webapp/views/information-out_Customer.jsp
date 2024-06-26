@@ -4,7 +4,7 @@
 
 <div class="informationCustomer">
 	<p>登録しました</p>
-	
+
 	<p>
 		<button class="informationButton" type=button
 			onclick="location.href='/ShoppingSite/views/login_Customer.jsp'">ログインページへ</button>
