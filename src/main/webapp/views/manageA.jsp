@@ -22,16 +22,15 @@
 </p>
 
 <c:forEach var="manage" items="${manageList}">
-	<form action="/ShoppingSite/manageDeleteServlet" method="post">
-		<p>
-			<img src="/ShoppingSite/img/${manage.product_id}.jpg" alt="product_image" /><br>
-			${manage.product_name}<br>
-			${manage.product_price}円（税抜き）<br>
-			${manage.product_description}<br>
-			<input type="hidden" name="product_id" value="${manage.product_id}">
-			<input type="submit" value="削除">
-		</p>
-	</form>
+	<p>
+		<img src="/ShoppingSite/img/${manage.product_id}.jpg" alt="product_image" /><br>
+		${manage.product_name}<br>
+		${manage.product_price}円（税抜き）<br>
+		${manage.product_description}<br>
+		<input type="hidden" name="product_id" value="${manage.product_id}">
+		<button type=button
+			onclick="location.href='/ShoppingSite/views/manageDeleteConfirm.jsp'">削除</button>
+	</p>
 </c:forEach>
 
 <p>

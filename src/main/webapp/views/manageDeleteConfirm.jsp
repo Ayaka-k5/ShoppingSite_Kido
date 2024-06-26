@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@include file="../header.html"%>
 
-<h1>登録しますか？</h1>
+<h1>削除しますか？</h1>
 
-<form action="/ShoppingSite/manageServlet" method="post">
+<form action="/ShoppingSite/manageDeleteServlet" method="post">
 	<p>
 		商品名:
 		<%=request.getParameter("product_name")%>
@@ -24,16 +24,7 @@
 	</p>
 	<input type="hidden" name="product_description"
 		value="<%=request.getParameter("product_description")%>">
-
-	<p>
-		在庫:
-		<%=request.getParameter("product_stock")%>
-	</p>
-	<input type="hidden" name="product_stock"
-		value="<%=request.getParameter("product_stock")%>">
-
-	<p>
-		<input type="submit" value="登録">
+		<input type="submit" value="削除">
 	</p>
 </form>
 
