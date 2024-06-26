@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jp.co.aforce.beans.ManageList;
-import jp.co.aforce.dao.ManageDeleteDAO;
+import jp.co.aforce.dao.ManageListDAO.ManageDeleteDAO;
 
 @WebServlet("/manageDeleteServlet")
 public class ManageDeleteServlet extends HttpServlet {
@@ -27,7 +27,7 @@ public class ManageDeleteServlet extends HttpServlet {
 
 			session.setAttribute("manageDelete", manageDelete);
 
-			request.getRequestDispatcher("/views/manageStart.jsp").forward(request, response);
+			request.getRequestDispatcher("/views/manageDeleteOut.jsp").forward(request, response);
 
 		} catch (Exception e) {
 			e.printStackTrace(out);

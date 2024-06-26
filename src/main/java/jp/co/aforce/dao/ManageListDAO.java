@@ -33,4 +33,24 @@ public class ManageListDAO extends DAO {
 
 		return manageList;
 	}
+	
+	public class ManageDeleteDAO extends DAO {
+		public int search(int product_id)
+				throws Exception {
+			List<ManageList> manageDelete = new ArrayList<>();
+
+			Connection con = getConnection();
+
+			PreparedStatement st;
+			st = con.prepareStatement(
+					"DELETE FROM Product WHERE Product_ID = ?");
+			st.setInt(1, product_id);
+			int result = st.executeUpdate();
+
+			st.close();
+			con.close();
+
+			return result;
+		}
+	}
 }
