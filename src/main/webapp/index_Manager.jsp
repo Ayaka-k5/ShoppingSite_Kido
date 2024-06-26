@@ -13,13 +13,13 @@
 	</nav>
 </header>
 <div class="indexCustomer">
-<h1>Hug Me</h1>
-
-<img class="mainImage" src="img/duffy_friends1.png">
-
-<p>
-	ダッフィーフレンズのぬいぐるみを販売しているサイトです。
-</p>
+	<h1>Hug Me</h1>
+	
+	<img class="mainImage" src="img/duffy_friends1.png">
+	
+	<p>
+		ダッフィーフレンズのぬいぐるみを販売しているサイトです。
+	</p>
 </div>
 
 <%@include file="../footer.html"%>
