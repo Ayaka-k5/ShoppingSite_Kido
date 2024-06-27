@@ -17,7 +17,7 @@ public class ProductDAO extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"SELECT * FROM Product");
+				"SELECT * FROM product");
 		ResultSet rs = st.executeQuery();
 
 		while (rs.next()) {
@@ -42,7 +42,7 @@ public class ProductDAO extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"SELECT * FROM Product WHERE Product_Name LIKE ?");
+				"SELECT * FROM product WHERE Product_Name LIKE ?");
 		st.setString(1, "%" + keyword + "%");
 		ResultSet rs = st.executeQuery();
 

@@ -11,7 +11,7 @@ public class ManageDAO extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"INSERT INTO Product (Product_Name, Product_Price, Product_Description, Product_Stock) values (?, ?, ?, ?)");
+				"INSERT INTO product (Product_Name, Product_Price, Product_Description, Product_Stock) values (?, ?, ?, ?)");
 		st.setString(1, product_name);
 		st.setInt(2, product_price);
 		st.setString(3, product_description);

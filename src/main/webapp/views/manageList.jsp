@@ -7,7 +7,7 @@
 	<nav>
 		<ul>
 			<li><a href="/ShoppingSite/index_Manager.jsp">Hug Me</a></li>
-			<li><a href="/ShoppingSite/views/manageA.jsp">商品管理</a></li>
+			<li><a href="/ShoppingSite/views/manageList.jsp">商品管理</a></li>
 			<li><a href="/ShoppingSite/views/login-choice.jsp">ログイン/新規登録</a></li>
 			<li><a href="/ShoppingSite/views/logout_Manager.jsp">ログアウト</a></li>
 	</nav>

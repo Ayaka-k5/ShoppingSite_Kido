@@ -44,7 +44,7 @@ public class ManageList implements Serializable {
 	public void setProduct_description(String product_description) {
 		this.product_description = product_description;
 	}
-	
+
 	public void setProduct_stock(int product_stock) {
 		this.product_stock = product_stock;
 	}

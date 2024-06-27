@@ -9,7 +9,7 @@ public class InformationDAO_Customer extends DAO {
 		Connection con = getConnection();
 		
 		PreparedStatement st;
-		st = con.prepareStatement("SELECT * FROM Customer where Customer_Mailaddress = ?");
+		st = con.prepareStatement("SELECT * FROM customer where Customer_Mailaddress = ?");
 		st.setString(1, customer_mailaddress);
 		ResultSet rs = st.executeQuery();
 		int line = 0;
@@ -28,7 +28,7 @@ public class InformationDAO_Customer extends DAO {
 		
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"INSERT INTO Customer (Customer_Mailaddress, Customer_Password, Customer_LastName, Customer_FirstName, Customer_Telephone, Customer_Address) values (?, ?, ?, ?, ?, ?)");
+				"INSERT INTO customer (Customer_Mailaddress, Customer_Password, Customer_LastName, Customer_FirstName, Customer_Telephone, Customer_Address) values (?, ?, ?, ?, ?, ?)");
 		st.setString(1, customer_mailaddress);
 		st.setString(2, customer_password);
 		st.setString(3, customer_lastname);

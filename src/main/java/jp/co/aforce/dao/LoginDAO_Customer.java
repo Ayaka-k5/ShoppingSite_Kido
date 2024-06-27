@@ -15,7 +15,7 @@ public class LoginDAO_Customer extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"SELECT * FROM Customer WHERE Customer_Mailaddress= ? and Customer_Password= ?");
+				"SELECT * FROM customer WHERE Customer_Mailaddress= ? and Customer_Password= ?");
 		st.setString(1, customer_mailaddress);
 		st.setString(2, customer_password);
 		ResultSet rs = st.executeQuery();

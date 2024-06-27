@@ -17,7 +17,7 @@ public class ManageListDAO extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"SELECT * FROM Product");
+				"SELECT * FROM product");
 		ResultSet rs = st.executeQuery();
 
 		while (rs.next()) {
@@ -26,6 +26,7 @@ public class ManageListDAO extends DAO {
 			manage.setProduct_name(rs.getString("product_name"));
 			manage.setProduct_price(rs.getInt("product_price"));
 			manage.setProduct_description(rs.getString("product_description"));
+			manage.setProduct_stock(rs.getInt("product_stock"));
 			manageList.add(manage);
 		}
 		st.close();

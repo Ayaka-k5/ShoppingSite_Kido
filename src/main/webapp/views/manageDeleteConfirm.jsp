@@ -33,6 +33,13 @@
 		</p>
 		<input type="hidden" name="product_description"
 			value="<%=request.getParameter("product_description")%>">
+			
+			<p>
+			在庫:
+			<%=request.getParameter("product_stock")%>
+		</p>
+		<input type="hidden" name="product_stock"
+			value="<%=request.getParameter("product_stock")%>">
 
 		<p>
 			<input class="productButton" type="submit" value="削除">

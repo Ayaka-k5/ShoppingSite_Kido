@@ -10,7 +10,7 @@ public class ManageDeleteDAO extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"DELETE FROM Product WHERE Product_ID = ?");
+				"DELETE FROM product WHERE Product_ID = ?");
 		st.setInt(1, product_id);
 		int result = st.executeUpdate();
 

@@ -15,7 +15,7 @@ public class LoginDAO_Manager extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"SELECT * FROM Manager WHERE Manager_Mailaddress= ? and Manager_Password= ?");
+				"SELECT * FROM manager WHERE Manager_Mailaddress= ? and Manager_Password= ?");
 		st.setString(1, manager_mailaddress);
 		st.setString(2, manager_password);
 		ResultSet rs = st.executeQuery();
