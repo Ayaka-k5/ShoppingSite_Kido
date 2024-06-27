@@ -7,7 +7,7 @@
 
 	<p>
 		<button class="logoutButton" type=button
-			onclick="location.href='/ShoppingSite/views/login-choice.jsp'">ログインページへ</button>
+			onclick="location.href='/ShoppingSite/index_Customer.jsp'">トップページへ</button>
 	</p>
 </div>
 
